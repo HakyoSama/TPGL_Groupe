@@ -83,9 +83,7 @@ public class Panier extends Observable {
             notifyObservers(getTaillePanier());
         }
         else 
-        {
-            System.err.println("Panier vide.");
-        }
+            throw new PanierVideException();
     }
 
     //groupe 6
