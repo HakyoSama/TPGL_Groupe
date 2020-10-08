@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Kiwi.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Compteur</a> &gt; <a href="index.source.html" class="el_package">fr.ufrsciencestech.compteur.model</a> &gt; <span class="el_source">Kiwi.java</span></div><h1>Kiwi.java</h1><pre class="source lang-java linenums">package fr.ufrsciencestech.compteur.model;
+
+public class Kiwi implements Fruit{
+    private double prix;
+    private String origine;
+
+    public Kiwi()
+<span class="nc" id="L8">    {</span>
+<span class="nc" id="L9">        this.prix = 1;  //prix en euros</span>
+<span class="nc" id="L10">        this.origine=&quot;France&quot;;</span>
+<span class="nc" id="L11">    }</span>
+
+    public Kiwi(double prix, String origine)
+<span class="nc" id="L14">    {</span>
+<span class="nc bnc" id="L15" title="All 2 branches missed.">	if(prix &lt; 0)</span>
+<span class="nc" id="L16">	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs</span>
+	else
+<span class="nc" id="L18">	    this.prix = prix;</span>
+
+<span class="nc bnc" id="L20" title="All 2 branches missed.">	if(origine.equals(&quot;&quot;))</span>
+<span class="nc" id="L21">            this.origine = &quot;France&quot;;  //France par défaut</span>
+	else
+<span class="nc" id="L23">            this.origine = origine;</span>
+<span class="nc" id="L24">    }</span>
+
+    public double getPrix(){
+<span class="nc" id="L27">	return prix;</span>
+    }
+
+    public void setPrix(double prix){
+<span class="nc" id="L31">	this.prix=prix;</span>
+<span class="nc" id="L32">    }</span>
+
+    public String getOrigine(){
+<span class="nc" id="L35">	return origine;</span>
+    }
+
+    public void setOrigine(String origine){
+<span class="nc" id="L39">	this.origine=origine;</span>
+<span class="nc" id="L40">    }</span>
+
+    @Override
+    public String toString(){
+<span class="nc" id="L44">        return &quot;Kiwi de &quot; + origine + &quot; a &quot; + prix + &quot; euros&quot;;</span>
+    }
+
+    @Override
+    public boolean equals(Object o){  //predicat pour tester si 2 kiwis sont equivalentes
+<span class="nc bnc" id="L49" title="All 4 branches missed.">        if(o != null &amp;&amp; getClass() == o.getClass()){</span>
+<span class="nc" id="L50">            Kiwi or = (Kiwi) o;</span>
+<span class="nc bnc" id="L51" title="All 4 branches missed.">            return (prix == or.prix &amp;&amp; origine.equals(or.origine));</span>
+        }
+<span class="nc" id="L53">        return false;</span>
+    }
+
+    public boolean isSeedless() {  //predicat indiquant qu'un kiwi n'a pas de pepins
+<span class="nc" id="L57">        return true;</span>
+    }
+
+
+    public static void main (String[] args){
+        //Ecrire ici vos tests
+<span class="nc" id="L63">        Kiwi w1 = new Kiwi();</span>
+<span class="nc" id="L64">        System.out.println(&quot;w1 :&quot;+w1.getPrix()+w1.getOrigine());</span>
+<span class="nc" id="L65">        System.out.println(w1.toString());</span>
+<span class="nc" id="L66">	System.out.println(&quot;premier test Kiwi&quot;);</span>
+<span class="nc" id="L67">   }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VueGraphSwing.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Compteur</a> &gt; <a href="index.source.html" class="el_package">fr.ufrsciencestech.compteur.view</a> &gt; <span class="el_source">VueGraphSwing.java</span></div><h1>VueGraphSwing.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fr.ufrsciencestech.compteur.view;
+
+import fr.ufrsciencestech.compteur.controler.Controleur;
+import java.awt.*;
+import javax.swing.*;
+import java.util.*;
+
+/**
+ *
+ * @author celine
+ */
+public class VueGraphSwing extends JFrame implements VueG{
+    private JButton inc;
+    private JButton dec;
+    private JLabel affiche;
+    
+    public VueGraphSwing(){
+<span class="fc" id="L23">        super (&quot;CompteurSwing&quot;);</span>
+<span class="fc" id="L24">        inc = new JButton(&quot;+&quot;);</span>
+<span class="fc" id="L25">        dec = new JButton(&quot;-&quot;);</span>
+<span class="fc" id="L26">        affiche = new JLabel(&quot;0&quot;, JLabel.CENTER);</span>
+<span class="fc" id="L27">        add(inc, BorderLayout.NORTH);</span>
+<span class="fc" id="L28">        add(dec, BorderLayout.SOUTH);</span>
+<span class="fc" id="L29">        add(affiche, BorderLayout.CENTER);</span>
+        
+<span class="fc" id="L31">        inc.setName(&quot;Plus&quot;);</span>
+<span class="fc" id="L32">        dec.setName(&quot;Moins&quot;);</span>
+<span class="fc" id="L33">        affiche.setName(&quot;Affichage&quot;);</span>
+<span class="fc" id="L34">        this.pack();</span>
+<span class="fc" id="L35">        this.setVisible(true);</span>
+<span class="fc" id="L36">        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L37">    }</span>
+    
+    public void addControleur(Controleur c){
+<span class="fc" id="L40">        getInc().addActionListener(c);</span>
+<span class="fc" id="L41">        getDec().addActionListener(c);</span>
+<span class="fc" id="L42">    }</span>
+    
+    @Override
+    public void update(Observable m, Object compte){     //This method is called whenever the observed object is changed
+<span class="fc" id="L46">        getAffiche().setText(((Integer) compte).toString());</span>
+<span class="fc" id="L47">    }</span>
+
+    /**
+     * @return the inc
+     */
+    public JButton getInc() {
+<span class="fc" id="L53">        return inc;</span>
+    }
+
+    /**
+     * @param inc the inc to set
+     */
+    public void setInc(JButton inc) {
+<span class="nc" id="L60">        this.inc = inc;</span>
+<span class="nc" id="L61">    }</span>
+
+    /**
+     * @return the dec
+     */
+    public JButton getDec() {
+<span class="fc" id="L67">        return dec;</span>
+    }
+
+    /**
+     * @param dec the dec to set
+     */
+    public void setDec(JButton dec) {
+<span class="nc" id="L74">        this.dec = dec;</span>
+<span class="nc" id="L75">    }</span>
+
+    /**
+     * @return the affiche
+     */
+    public JLabel getAffiche() {
+<span class="fc" id="L81">        return affiche;</span>
+    }
+
+    /**
+     * @param affiche the affiche to set
+     */
+    public void setAffiche(JLabel affiche) {
+<span class="fc" id="L88">        this.affiche = affiche;</span>
+<span class="fc" id="L89">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

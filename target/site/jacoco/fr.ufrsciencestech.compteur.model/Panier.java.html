@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Panier.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Compteur</a> &gt; <a href="index.source.html" class="el_package">fr.ufrsciencestech.compteur.model</a> &gt; <span class="el_source">Panier.java</span></div><h1>Panier.java</h1><pre class="source lang-java linenums">package fr.ufrsciencestech.compteur.model;
+
+import static java.lang.Math.abs;
+import java.util.*;
+/**
+ *
+ * @author roudet
+ */
+public class Panier extends Observable {
+    private ArrayList&lt;Fruit&gt; fruits;  //attribut pour stocker les fruits
+    private int contenanceMax;        //nb maximum d'oranges que peut contenir le panier
+	
+    //groupe 1
+<span class="fc" id="L14">    public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)</span>
+<span class="fc" id="L15">        this.contenanceMax = abs(contenanceMax);</span>
+<span class="fc" id="L16">        this.fruits = new ArrayList&lt;Fruit&gt;();</span>
+<span class="fc" id="L17">    }</span>
+
+    @Override
+    public String toString(){  //affichage de ce qui est contenu dans le panier : liste des fruits presents
+<span class="nc" id="L21">        String toString = &quot;Contenu du Panier : \n&quot;;</span>
+<span class="nc bnc" id="L22" title="All 2 branches missed.">        for (Fruit fruit : fruits) {</span>
+<span class="nc" id="L23">          toString += fruit.toString() + '\n';</span>
+<span class="nc" id="L24">        }</span>
+<span class="nc" id="L25">        return toString;</span>
+    }
+    
+    //groupe 2
+    public ArrayList&lt;Fruit&gt; getFruits() {  //accesseur du premier attribut
+<span class="nc" id="L30">        return fruits;</span>
+    }
+
+    public void setFruits(ArrayList&lt;Fruit&gt; fruits) { //modificateur du premier attribut
+<span class="nc" id="L34">        this.fruits = fruits;</span>
+<span class="nc" id="L35">    }</span>
+
+    public int getTaillePanier(){  //accesseur retournant le nombre d'element dans l'array list fruits
+<span class="fc" id="L38">        return this.fruits.size();</span>
+    }
+    
+    public int getContenanceMax(){  //accesseur du second attribut
+<span class="nc" id="L42">	return this.contenanceMax;</span>
+    }
+
+    //groupe 3
+    public Fruit getFruit(int i){  //accesseur retournant le fruit contenu dans le panier a l'emplacement n°i ou null s'il n'y a rien a cet emplacement
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        if(i &lt; this.fruits.size()) </span>
+<span class="fc" id="L48">            return this.fruits.get(i);</span>
+<span class="nc" id="L49">        return null;</span>
+    }
+    
+    public void setFruit(int i, Fruit f){  //modificateur du fruit contenu dans le panier a l'emplacement n°i par f (s'il y a bien deja un fruit a cet emplacement, ne rien faire sinon)
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        if(i &lt; this.fruits.size())</span>
+<span class="nc" id="L54">            this.fruits.set(i, f);</span>
+<span class="nc" id="L55">    }</span>
+    
+    public boolean estVide(){  //predicat indiquant que le panier est vide
+<span class="fc" id="L58">	return this.fruits.isEmpty();    //modifie par C. Roudet</span>
+    }
+    
+    public boolean estPlein(){  //predicat indiquant que le panier est plein
+<span class="fc bfc" id="L62" title="All 2 branches covered.">	return this.fruits.size() == this.contenanceMax;</span>
+    }
+
+    //groupe 4
+    public void ajout(Fruit o) throws PanierPleinException{  //ajoute le fruit o a la fin du panier si celui-ci n'est pas plein
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        if(o == null)</span>
+<span class="fc" id="L68">            return;</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        if(!estPlein()){</span>
+<span class="fc" id="L70">            fruits.add(o);</span>
+<span class="fc" id="L71">            setChanged();</span>
+<span class="fc" id="L72">            notifyObservers(getTaillePanier());</span>
+        }
+        else 
+<span class="fc" id="L75">            throw new PanierPleinException();</span>
+<span class="fc" id="L76">    }</span>
+
+    //groupe 5
+    public void retrait() throws PanierVideException{ //retire le dernier fruit du panier si celui-ci n'est pas vide
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        if(!estVide()){</span>
+<span class="fc" id="L81">            fruits.remove(fruits.size()-1);</span>
+<span class="fc" id="L82">            setChanged();</span>
+<span class="fc" id="L83">            notifyObservers(getTaillePanier());</span>
+        }
+        else 
+        {
+<span class="fc" id="L87">            System.err.println(&quot;Panier vide.&quot;);</span>
+        }
+<span class="fc" id="L89">    }</span>
+
+    //groupe 6
+    public double getPrix(){  //calcule le prix du panier par addition des prix de tous les fruits contenus dedans
+<span class="fc" id="L93">        double prix = 0;</span>
+<span class="fc bfc" id="L94" title="All 2 branches covered.">        for(Fruit f : fruits)</span>
+        {
+<span class="fc" id="L96">            prix += f.getPrix();</span>
+<span class="fc" id="L97">        }</span>
+<span class="fc" id="L98">	return prix;</span>
+    }
+    
+    //groupe 7
+    public void boycotteOrigine(String origine){  //supprime du panier tous les fruits provenant du pays origine
+<span class="fc" id="L103">	int i = 0;					//A</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">	while(i &lt; fruits.size()){			//B</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">            if(fruits.get(i).getOrigine().equals(origine)) //C</span>
+<span class="fc" id="L106">		fruits.remove(i);			//D</span>
+            else								 
+<span class="fc" id="L108">		i++ ;					//E</span>
+        }
+<span class="fc" id="L110">    }  </span>
+        
+    //groupe 8    
+    @Override
+    public boolean equals(Object o){  ///predicat pour tester si 2 paniers sont equivalents : s'ils contiennent exactement les memes fruits
+<span class="pc bpc" id="L115" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) </span>
+<span class="nc" id="L116">            return false;</span>
+<span class="fc" id="L117">        Panier p = (Panier)o;</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">        if(p.getTaillePanier() != this.getTaillePanier() )</span>
+<span class="nc" id="L119">            return false;</span>
+
+<span class="fc bfc" id="L121" title="All 2 branches covered.">        for (int i = 0; i &lt; this.getTaillePanier(); i++) </span>
+        {
+<span class="pc bpc" id="L123" title="1 of 2 branches missed.">            if (!p.getFruit(i).equals(this.getFruit(i))) </span>
+<span class="nc" id="L124">                return false;</span>
+        }
+<span class="fc" id="L126">        return true;</span>
+    }
+    
+    //tests
+    public static void main (String[] args){
+    	//Ecrire ici vos tests
+<span class="nc" id="L132">        System.out.println(&quot;premier test Panier&quot;);</span>
+<span class="nc" id="L133">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

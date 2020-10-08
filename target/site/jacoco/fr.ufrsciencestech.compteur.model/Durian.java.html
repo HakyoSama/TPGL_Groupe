@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Durian.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Compteur</a> &gt; <a href="index.source.html" class="el_package">fr.ufrsciencestech.compteur.model</a> &gt; <span class="el_source">Durian.java</span></div><h1>Durian.java</h1><pre class="source lang-java linenums">package fr.ufrsciencestech.compteur.model;
+
+/**
+ *
+ * @author Tridard
+ */
+public class Durian implements Fruit{
+    private double prix;
+    private String origine;
+
+    public Durian()
+<span class="nc" id="L12">    {</span>
+<span class="nc" id="L13">        this.prix = 0.5;  //prix en euros</span>
+<span class="nc" id="L14">        this.origine=&quot;Espagne&quot;;</span>
+<span class="nc" id="L15">    }</span>
+
+    public Durian(double prix, String origine)
+<span class="nc" id="L18">    {</span>
+<span class="nc bnc" id="L19" title="All 2 branches missed.">	if(prix &lt; 0)</span>
+<span class="nc" id="L20">	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs</span>
+	else
+<span class="nc" id="L22">	    this.prix = prix;</span>
+
+<span class="nc bnc" id="L24" title="All 2 branches missed.">	if(origine.equals(&quot;&quot;))</span>
+<span class="nc" id="L25">            this.origine = &quot;Chine&quot;;  //Espagne par défaut</span>
+	else
+<span class="nc" id="L27">            this.origine = origine;</span>
+<span class="nc" id="L28">    }</span>
+
+    public double getPrix(){
+<span class="nc" id="L31">	return prix;</span>
+    }
+
+    public void setPrix(double prix){
+<span class="nc" id="L35">	this.prix=prix;</span>
+<span class="nc" id="L36">    }</span>
+
+    public String getOrigine(){
+<span class="nc" id="L39">	return origine;</span>
+    }
+
+    public void setOrigine(String origine){
+<span class="nc" id="L43">	this.origine=origine;</span>
+<span class="nc" id="L44">    }</span>
+
+    @Override
+    public String toString(){
+<span class="nc" id="L48">        return &quot;Durian de &quot; + origine + &quot; a &quot; + prix + &quot; euros&quot;;</span>
+    }
+
+    @Override
+    public boolean equals(Object o){  //predicat pour tester si 2 Durian sont equivalentes
+<span class="nc bnc" id="L53" title="All 4 branches missed.">        if(o != null &amp;&amp; getClass() == o.getClass()){</span>
+<span class="nc" id="L54">            Durian or = (Durian) o;</span>
+<span class="nc bnc" id="L55" title="All 4 branches missed.">            return (prix == or.prix &amp;&amp; origine.equals(or.origine));</span>
+        }
+<span class="nc" id="L57">        return false;</span>
+    }
+
+    public boolean isSeedless() {  //predicat indiquant qu'un Durian a des pepins
+<span class="nc" id="L61">        return false;</span>
+    }
+
+
+    public static void main (String[] args){
+        //Ecrire ici vos tests
+<span class="nc" id="L67">	System.out.println(&quot;premier test Durian&quot;);</span>
+      //test Durian = Durian
+
+
+<span class="nc" id="L71">   }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

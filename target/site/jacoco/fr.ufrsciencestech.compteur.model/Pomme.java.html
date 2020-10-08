@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Pomme.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Compteur</a> &gt; <a href="index.source.html" class="el_package">fr.ufrsciencestech.compteur.model</a> &gt; <span class="el_source">Pomme.java</span></div><h1>Pomme.java</h1><pre class="source lang-java linenums">package fr.ufrsciencestech.compteur.model;
+
+/**
+ *
+ * @author nathan voizeux
+ */
+public class Pomme implements Fruit{
+    private double prix;
+    private String origine;
+	
+    public Pomme() 
+<span class="nc" id="L12">    {</span>
+<span class="nc" id="L13">        this.prix = 0.5;  //prix en euros</span>
+<span class="nc" id="L14">        this.origine=&quot;Espagne&quot;;</span>
+<span class="nc" id="L15">    }</span>
+    
+    public Pomme(double prix, String origine) 
+<span class="nc" id="L18">    {</span>
+<span class="nc bnc" id="L19" title="All 2 branches missed.">	if(prix &lt; 0)</span>
+<span class="nc" id="L20">	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs</span>
+	else
+<span class="nc" id="L22">	    this.prix = prix;</span>
+
+<span class="nc bnc" id="L24" title="All 2 branches missed.">	if(origine.equals(&quot;&quot;))</span>
+<span class="nc" id="L25">            this.origine = &quot;Espagne&quot;;  //Espagne par défaut</span>
+	else
+<span class="nc" id="L27">            this.origine = origine;   </span>
+<span class="nc" id="L28">    }</span>
+
+    @Override
+    public double getPrix(){
+<span class="nc" id="L32">	return prix;</span>
+    }
+
+    public void setPrix(double prix){
+<span class="nc" id="L36">	this.prix=prix;</span>
+<span class="nc" id="L37">    }</span>
+
+    @Override
+    public String getOrigine(){
+<span class="nc" id="L41">	return origine;</span>
+    }
+ 
+    public void setOrigine(String origine){
+<span class="nc" id="L45">	this.origine=origine;</span>
+<span class="nc" id="L46">    }</span>
+
+    @Override
+    public String toString(){
+<span class="nc" id="L50">        return &quot;Pomme de &quot; + origine + &quot; a &quot; + prix + &quot; euros&quot;;</span>
+    }
+
+    @Override
+    public boolean equals(Object o){  //predicat pour tester si 2 Pommes sont equivalentes
+<span class="nc bnc" id="L55" title="All 4 branches missed.">        if(o != null &amp;&amp; getClass() == o.getClass()){</span>
+<span class="nc" id="L56">            Pomme or = (Pomme) o;</span>
+<span class="nc bnc" id="L57" title="All 4 branches missed.">            return (prix == or.prix &amp;&amp; origine.equals(or.origine));</span>
+        }
+<span class="nc" id="L59">        return false;</span>
+    }
+
+    @Override
+    public boolean isSeedless() {  //predicat indiquant qu'une Pomme a des pepins
+<span class="nc" id="L64">        return false;</span>
+    }
+
+
+    public static void main (String[] args){
+        //Ecrire ici vos tests
+<span class="nc" id="L70">        Pomme o1 = new Pomme();</span>
+<span class="nc" id="L71">    System.out.println(o1+&quot;\n&quot;);</span>
+<span class="nc" id="L72">        Pomme o2 = new Pomme(-5,&quot;&quot;);</span>
+<span class="nc" id="L73">        Pomme o3 = new Pomme(15,&quot;Grece&quot;);</span>
+<span class="nc" id="L74">    System.out.println(o2+&quot;\n&quot;);</span>
+<span class="nc" id="L75">    System.out.println(o3+&quot;\n&quot;);</span>
+<span class="nc" id="L76">        o1.setOrigine(&quot;France&quot;);</span>
+<span class="nc" id="L77">        o1.setPrix(25);</span>
+<span class="nc" id="L78">    System.out.println(o1+&quot;\n&quot;);</span>
+    //System.out.println(o2.equals(o3));
+	//System.out.println(&quot;premier test Pomme&quot;);
+<span class="nc" id="L81">   }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

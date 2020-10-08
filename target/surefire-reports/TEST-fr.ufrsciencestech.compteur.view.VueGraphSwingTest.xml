@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.457" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.443" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="/usr/local/jdk-1.8.0_261/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/surefire/surefirebooter269508569651256489.jar /home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/surefire 2020-10-08T11-21-19_737-jvmRun1 surefire2027582991142659853tmp surefire_07894538924275488745tmp"/>
+    <property name="sun.java.command" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/surefire/surefirebooter2587097864850367705.jar /home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/surefire 2020-10-08T11-25-11_109-jvmRun1 surefire8009079316168416355tmp surefire_0643847647337627425tmp"/>
     <property name="surefire.test.class.path" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/test-classes:/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/classes:/home1/sg255589/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home1/sg255589/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home1/sg255589/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:/home1/sg255589/.m2/repository/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-expression/5.1.9.RELEASE/spring-expression-5.1.9.RELEASE.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home1/sg255589"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/surefire/surefirebooter269508569651256489.jar:/home1/sg255589/.m2/repository/org/jacoco/org.jacoco.agent/0.7.7.201606060606/org.jacoco.agent-0.7.7.201606060606-runtime.jar"/>
+    <property name="surefire.real.class.path" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/surefire/surefirebooter2587097864850367705.jar:/home1/sg255589/.m2/repository/org/jacoco/org.jacoco.agent/0.7.7.201606060606/org.jacoco.agent-0.7.7.201606060606-runtime.jar"/>
     <property name="sun.boot.class.path" value="/usr/local/jdk-1.8.0_261/jre/lib/resources.jar:/usr/local/jdk-1.8.0_261/jre/lib/rt.jar:/usr/local/jdk-1.8.0_261/jre/lib/sunrsasign.jar:/usr/local/jdk-1.8.0_261/jre/lib/jsse.jar:/usr/local/jdk-1.8.0_261/jre/lib/jce.jar:/usr/local/jdk-1.8.0_261/jre/lib/charsets.jar:/usr/local/jdk-1.8.0_261/jre/lib/jfr.jar:/usr/local/jdk-1.8.0_261/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_261-b12"/>
@@ -59,8 +59,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testIncr" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.227"/>
-  <testcase name="testDecrOk" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.148"/>
-  <testcase name="testDecrZero" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.074"/>
-  <testcase name="testUpdate" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.007"/>
+  <testcase name="testIncr" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.183"/>
+  <testcase name="testDecrOk" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.169"/>
+  <testcase name="testDecrZero" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.08"/>
+  <testcase name="testUpdate" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.01"/>
 </testsuite>

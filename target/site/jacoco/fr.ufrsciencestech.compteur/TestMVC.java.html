@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TestMVC.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Compteur</a> &gt; <a href="index.source.html" class="el_package">fr.ufrsciencestech.compteur</a> &gt; <span class="el_source">TestMVC.java</span></div><h1>TestMVC.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fr.ufrsciencestech.compteur;
+
+import fr.ufrsciencestech.compteur.controler.Controleur;
+import fr.ufrsciencestech.compteur.view.*;
+import fr.ufrsciencestech.compteur.model.*;
+
+//utilise pour springIoC :
+import javax.swing.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ *
+ * @author celine
+ */
+public class TestMVC {
+    private VueG vueg;              //pour pouvoir changer de vue si on le souhaite
+    private Controleur controleur;  //pour pouvoir changer de controleur si on le souhaite
+    
+    /**
+     * @return the vueg
+     */
+    public VueG getVueg() {
+<span class="nc" id="L29">        return vueg;</span>
+    }
+
+    /**
+     * @param vueg the vueg to set
+     */
+    public void setVueg(VueG vueg) {
+<span class="nc" id="L36">        this.vueg = vueg;</span>
+<span class="nc" id="L37">    }</span>
+
+    /**
+     * @return the controleur
+     */
+    public Controleur getControleur() {
+<span class="nc" id="L43">        return controleur;</span>
+    }
+
+    /**
+     * @param controleur the controleur to set
+     */
+    public void setControleur(Controleur controleur) {
+<span class="nc" id="L50">        this.controleur = controleur;</span>
+<span class="nc" id="L51">    }</span>
+    
+    
+<span class="nc" id="L54">    public TestMVC(){</span>
+        //sans utiliser SpringIoC :
+        /*vueg = new VueGraphSwing();
+        controleur = new Controleur();
+        Panier panier = new Panier(4);
+        VueConsole vuec = new VueConsole();
+
+        controleur.setPanier(panier);                 
+        panier.addObserver(vueg);        
+        panier.addObserver(vuec);         
+        vueg.addControleur(controleur);*/
+<span class="nc" id="L65">    }</span>
+    
+    public static void main(String[] args){
+        //TestMVC test = new TestMVC();    //sans utiliser SpringIoC
+        
+        //La meme chose mais avec SpringIoC :
+<span class="nc" id="L71">        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);</span>
+<span class="nc" id="L72">        TestMVC test = (TestMVC)context.getBean(&quot;MVC&quot;);  //SpringIoC</span>
+<span class="nc" id="L73">        test.setControleur( (Controleur)context.getBean(&quot;Controleur&quot;) );  //SpringIoC</span>
+<span class="nc" id="L74">        test.setVueg( (VueG)context.getBean(&quot;Vue&quot;) );   //SpringIoC</span>
+         
+<span class="nc" id="L76">        Panier p = new Panier(10); </span>
+<span class="nc" id="L77">        test.getControleur().setPanier(p);  </span>
+        
+<span class="nc" id="L79">        p.addObserver(test.getVueg());</span>
+<span class="nc" id="L80">        test.getVueg().addControleur(test.getControleur());</span>
+        
+<span class="nc" id="L82">        VueConsole vuec = new VueConsole();</span>
+<span class="nc" id="L83">        p.addObserver(vuec);</span>
+<span class="nc" id="L84">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
