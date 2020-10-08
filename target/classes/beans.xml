@@ -11,7 +11,7 @@ and open the template in the editor.
 
         <!-- ===== Déclaration des Managers ===== -->
 	<bean id="Controleur" class="fr.ufrsciencestech.compteur.controler.Controleur"></bean>
-        <bean id="Vue" class="fr.ufrsciencestech.compteur.view.VueGraphSwing"></bean>
+        <bean id="Vue" class="fr.ufrsciencestech.compteur.view.VueGraphique"></bean>
 
         <!-- ===== ManagerFactory ===== -->
 	<bean id="MVC" class="fr.ufrsciencestech.compteur.TestMVC">

@@ -69,7 +69,7 @@ public class Panier extends Observable {
         if(!estPlein()){
             fruits.add(o);
             setChanged();
-            notifyObservers(getTaillePanier());
+            notifyObservers(toString());
         }
         else 
             throw new PanierPleinException();
@@ -80,7 +80,7 @@ public class Panier extends Observable {
         if(!estVide()){
             fruits.remove(fruits.size()-1);
             setChanged();
-            notifyObservers(getTaillePanier());
+            notifyObservers(toString());
         }
         else 
             throw new PanierVideException();
