@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.457" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/test-classes:/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/classes:/home1/sg255589/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home1/sg255589/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home1/sg255589/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:/home1/sg255589/.m2/repository/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-expression/5.1.9.RELEASE/spring-expression-5.1.9.RELEASE.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/usr/local/jdk-1.8.0_261/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/surefire/surefirebooter269508569651256489.jar /home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/surefire 2020-10-08T11-21-19_737-jvmRun1 surefire2027582991142659853tmp surefire_07894538924275488745tmp"/>
+    <property name="surefire.test.class.path" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/test-classes:/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/classes:/home1/sg255589/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home1/sg255589/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home1/sg255589/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:/home1/sg255589/.m2/repository/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar:/home1/sg255589/.m2/repository/org/springframework/spring-expression/5.1.9.RELEASE/spring-expression-5.1.9.RELEASE.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home1/sg255589"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/usr/local/jdk-1.8.0_261/jre"/>
+    <property name="basedir" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/target/surefire/surefirebooter269508569651256489.jar:/home1/sg255589/.m2/repository/org/jacoco/org.jacoco.agent/0.7.7.201606060606/org.jacoco.agent-0.7.7.201606060606-runtime.jar"/>
+    <property name="sun.boot.class.path" value="/usr/local/jdk-1.8.0_261/jre/lib/resources.jar:/usr/local/jdk-1.8.0_261/jre/lib/rt.jar:/usr/local/jdk-1.8.0_261/jre/lib/sunrsasign.jar:/usr/local/jdk-1.8.0_261/jre/lib/jsse.jar:/usr/local/jdk-1.8.0_261/jre/lib/jce.jar:/usr/local/jdk-1.8.0_261/jre/lib/charsets.jar:/usr/local/jdk-1.8.0_261/jre/lib/jfr.jar:/usr/local/jdk-1.8.0_261/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_261-b12"/>
+    <property name="user.name" value="sg255589"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="4.19.0-11-amd64"/>
+    <property name="java.endorsed.dirs" value="/usr/local/jdk-1.8.0_261/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="/usr/local/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="localRepository" value="/home1/sg255589/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="1.8.0_261"/>
+    <property name="user.dir" value="/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/local/jdk-1.8/jre/lib/amd64:/usr/local/jdk-1.8/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.261-b12"/>
+    <property name="java.ext.dirs" value="/usr/local/jdk-1.8.0_261/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testIncr" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.227"/>
+  <testcase name="testDecrOk" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.148"/>
+  <testcase name="testDecrZero" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.074"/>
+  <testcase name="testUpdate" classname="fr.ufrsciencestech.compteur.view.VueGraphSwingTest" time="0.007"/>
+</testsuite>

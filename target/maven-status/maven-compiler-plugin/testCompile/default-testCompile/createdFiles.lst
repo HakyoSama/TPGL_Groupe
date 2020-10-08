@@ -1,5 +1,5 @@
-fr/ufrsciencestech/compteur/model/ModeleTest.class
 fr/ufrsciencestech/compteur/controler/ControleurTest.class
 fr/ufrsciencestech/compteur/view/VueGraphAWTTest.class
+fr/ufrsciencestech/compteur/model/PanierTest.class
 fr/ufrsciencestech/compteur/view/VueConsoleTest.class
 fr/ufrsciencestech/compteur/view/VueGraphSwingTest.class

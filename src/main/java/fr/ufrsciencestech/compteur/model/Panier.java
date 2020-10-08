@@ -72,7 +72,7 @@ public class Panier extends Observable {
             notifyObservers(getTaillePanier());
         }
         else 
-            System.err.println("Panier plein.");
+            throw new PanierPleinException();
     }
 
     //groupe 5

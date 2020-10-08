@@ -1,5 +1,5 @@
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/test/java/fr/ufrsciencestech/compteur/model/ModeleTest.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/test/java/fr/ufrsciencestech/compteur/view/VueGraphSwingTest.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/test/java/fr/ufrsciencestech/compteur/controler/ControleurTest.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/test/java/fr/ufrsciencestech/compteur/view/VueGraphAWTTest.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/test/java/fr/ufrsciencestech/compteur/view/VueConsoleTest.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/test/java/fr/ufrsciencestech/compteur/controler/ControleurTest.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/test/java/fr/ufrsciencestech/compteur/view/VueGraphSwingTest.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/test/java/fr/ufrsciencestech/compteur/model/PanierTest.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/test/java/fr/ufrsciencestech/compteur/view/VueGraphAWTTest.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/test/java/fr/ufrsciencestech/compteur/view/VueConsoleTest.java

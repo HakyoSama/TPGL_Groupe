@@ -1,8 +1,19 @@
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/main/java/fr/ufrsciencestech/compteur/TestUtils.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/main/java/fr/ufrsciencestech/compteur/view/VueConsole.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/main/java/fr/ufrsciencestech/compteur/TestMVC.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/main/java/fr/ufrsciencestech/compteur/controler/Controleur.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/main/java/fr/ufrsciencestech/compteur/view/VueG.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/main/java/fr/ufrsciencestech/compteur/model/Modele.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/main/java/fr/ufrsciencestech/compteur/view/VueGraphAWT.java
-/home2/lm328554/Documents/M1/Génie Logiciel/TD/Compteur/src/main/java/fr/ufrsciencestech/compteur/view/VueGraphSwing.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Mangue.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/view/VueGraphAWT.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Durian.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/view/VueGraphSwing.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/view/VueG.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/TestUtils.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/PanierVideException.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Panier.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/controler/Controleur.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Jacque.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/view/VueConsole.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/PanierPleinException.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Cerise.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/TestMVC.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Pomme.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Orange.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Kiwi.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Banane.java
+/home2/sg255589/Documents/Master/M1/S1/tpgl/TD/TPGL_Groupe/src/main/java/fr/ufrsciencestech/compteur/model/Fruit.java
