@@ -33,8 +33,8 @@ public class VueConsole implements Observer{
         System.out.println(trace);
     }
     
-    public void update(Observable m, Object compte){   //This method is called whenever the observed object is changed
-        trace = "Nouvelle valeur : " + ((Integer) compte).toString();
+    public void update(Observable m, Object panier){   //This method is called whenever the observed object is changed
+        trace = "Nouvelle valeur : " + ((String) panier);
         System.out.println(trace);
     }
 }
