@@ -30,15 +30,15 @@ public class Macedoine{
       
       public void ajoute(Fruit f)
       {
-          fruits.add(f);
+          getFruits().add(f);
       }
       @Override
       public String toString()
       {
           String s="";
-          for(Fruit f : fruits)
+          for(Fruit f : getFruits())
           {
-              s+=f.toString()+" ";
+              s+=f.toString()+"\n";
           }
           return s;
       }
@@ -46,7 +46,7 @@ public class Macedoine{
       public double getPrix()
       {
           double d=0;
-          for(Fruit f : fruits)
+          for(Fruit f : getFruits())
           {
               d+=f.getPrix();
           }
@@ -56,12 +56,19 @@ public class Macedoine{
       public boolean isSeedless()
       {
       boolean b=true;
-          for(Fruit f : fruits)
+          for(Fruit f : getFruits())
           {
               if(! f.isSeedless())
                   b=false;
           }
           return b;
       }
+
+    /**
+     * @return the fruits
+     */
+    public ArrayList<Fruit> getFruits() {
+        return fruits;
+    }
     
 }

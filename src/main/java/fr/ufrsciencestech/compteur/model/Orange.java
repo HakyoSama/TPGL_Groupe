@@ -65,5 +65,8 @@ public class Orange implements Fruit{
     public static void main (String[] args){
         //Ecrire ici vos tests
 	System.out.println("premier test Orange");
+        Orange o = new Orange();
+        System.out.print("classe : "+o.getClass().getSimpleName()); 
+        String s = o.getClass().getSimpleName();
    }
 }
